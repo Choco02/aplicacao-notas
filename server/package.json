@@ -4,7 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "npx ts-node-dev --respawn --transpile-only ."
+    "start": "cd dist && node index.js",
+    "build": "npx tsc",
+    "dev": "npx ts-node-dev --respawn --transpile-only .",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "@prisma/client": "^3.6.0",
