@@ -21,6 +21,7 @@ const Login: NextPage = () => {
     console.log("action: ", action);
 
     console.log(api.defaults);
+    console.log(process.env);
 
     api
       .post("/" + action, { email, password })
