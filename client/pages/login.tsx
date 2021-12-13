@@ -5,9 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useRef } from "react";
 import styles from "../styles/Login.module.css";
-import { _api } from "../api";
-
-const api = _api();
+import { api } from "../api";
 
 const Login: NextPage = () => {
   const router = useRouter();

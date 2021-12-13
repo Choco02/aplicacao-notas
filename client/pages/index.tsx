@@ -3,9 +3,7 @@ import Head from "next/head";
 import Popup from "reactjs-popup";
 import { useState, useEffect, useRef, FormEvent } from "react";
 import { useRouter } from "next/router";
-import { _api } from "../api";
-
-const api = _api();
+import { api } from "../api";
 
 import styles from "../styles/Home.module.css";
 
