@@ -5,11 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useRef } from "react";
 import styles from "../styles/Login.module.css";
-import axios from 'axios';
-
-axios.defaults.baseURL = process.env.API_URL;
-
-const api = axios;
+import { api } from "../api";
 
 const Login: NextPage = () => {
   const router = useRouter();

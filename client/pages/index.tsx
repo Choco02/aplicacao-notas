@@ -3,11 +3,7 @@ import Head from "next/head";
 import Popup from "reactjs-popup";
 import { useState, useEffect, useRef, FormEvent } from "react";
 import { useRouter } from "next/router";
-import axios from 'axios';
-
-axios.defaults.baseURL = process.env.API_URL;
-
-const api = axios;
+import { api } from "../api";
 
 import styles from "../styles/Home.module.css";
 
