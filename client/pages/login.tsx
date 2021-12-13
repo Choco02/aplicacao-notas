@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useRef } from "react";
 import styles from "../styles/Login.module.css";
-import { api } from "./api/api";
+import { api } from "../api";
 
 const Login: NextPage = () => {
   const router = useRouter();
@@ -19,6 +19,7 @@ const Login: NextPage = () => {
     api
       .post("/" + action, { email, password })
       .then((res) => {
+        console.log(api.defaults);
         console.log(res);
         if (res.status === 200) {
           api.defaults.headers.common.authorization = `Bearer ${res.data.token}`;
