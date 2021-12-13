@@ -16,10 +16,11 @@ const Login: NextPage = () => {
     console.log(email, password);
     console.log("action: ", action);
 
+    console.log(api.defaults);
+    
     api
       .post("/" + action, { email, password })
       .then((res) => {
-        console.log(api.defaults);
         console.log(res);
         if (res.status === 200) {
           api.defaults.headers.common.authorization = `Bearer ${res.data.token}`;
