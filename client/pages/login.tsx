@@ -5,7 +5,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useRef } from "react";
 import styles from "../styles/Login.module.css";
-import { api } from "../api";
+import { _api } from "../api";
+
+const api = _api();
 
 const Login: NextPage = () => {
   const router = useRouter();
@@ -17,7 +19,7 @@ const Login: NextPage = () => {
     console.log("action: ", action);
 
     console.log(api.defaults);
-    
+
     api
       .post("/" + action, { email, password })
       .then((res) => {

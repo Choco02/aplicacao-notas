@@ -2,4 +2,4 @@ import axios from 'axios';
 
 axios.defaults.baseURL = process.env.API_URL;
 
-export const api = axios;
+export const _api = () => axios;
